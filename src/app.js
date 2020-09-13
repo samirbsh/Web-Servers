@@ -1,19 +1,11 @@
+const path = require('path');
 const express = require('express');
-
 const app = express();
+// redirection to public folders
+const publicDirectoryPath = path.join(__dirname, '../public')
+// Serving(customizing) up the server
+app.use(express.static(publicDirectoryPath))
 // Routes
-// blank parameter for home route
-app.get('',(req,res) =>{
-    res.send('Hello express!')
-})
-
-app.get('/help',(req,res) =>{
-    res.send('Help Page')
-})
-
-app.get('/about',(req,res) =>{
-    res.send('About')
-})
 
 app.get('/weather',(req,res) =>{
     res.send('Weather')
