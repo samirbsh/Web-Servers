@@ -1,4 +1,5 @@
 body {
+    background: linear-gradient(to right, rgb(132, 221, 34), rgb(73, 182, 152)) repeat scroll 0% 0%;
     color: #333333;
     font-family: arial;
     max-width: 650px;
