@@ -30,12 +30,12 @@ app.get("", (req, res) => {
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About Me",
-    name: "Ajay",
+    name: "Samir",
   });
 });
 
 app.get("/help", (req, res) => {
-  res.render("help", {
+  res.render("Help", {
     helpText: "This is help text",
     title: 'help',
     name: "Samir Kumar",
@@ -45,6 +45,22 @@ app.get("/help", (req, res) => {
 app.get("/weather", (req, res) => {
   res.send("Weather");
 });
+// Match anything that has not been matched so far
+// 404 for help
+app.get('/help/*', (req, res) => {
+  res.render('404',{
+    title: '404',
+    name: "Samir",
+    errorMessage: "Help Article Not Found"
+  })
+})
+app.get('*', (req, res) =>{
+  res.render('404',{
+    title: '404',
+    name: "Samir",
+    errorMessage: "Page not Found"
+  })
+})
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000.");

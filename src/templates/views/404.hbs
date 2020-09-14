@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel='icon' href='./weather.png'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -38,15 +37,14 @@
             text-decoration: none;
         }
     </style>
-    {{!-- <link rel="stylesheet" type="text/css" href= "./public/styles.css"> --}}
-    <title>Weather</title>
+    <title>404</title>
 </head>
 <body>
     <div class="main-content">
-        {{>header}}
-        <p>Use this site to get your weather</p>
+    {{>header}}
+    {{errorMessage}}
     </div>
     
-    {{>footer}}
+    {{>footer}}  
 </body>
 </html>
